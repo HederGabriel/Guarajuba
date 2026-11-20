@@ -696,15 +696,15 @@ button {
     color: white;
     position: relative;
     text-align: center;
-    padding: 90px 0 28px;
-    overflow: hidden
+    padding: 96px 0 28px;
+    overflow: hidden;
 }
 
 .footer-wave {
     position: absolute;
     inset: 0 0 auto;
-    height: 48px;
-    background: url("../assets/wave-footer.svg") center top/100% 100% no-repeat
+    height: clamp(64px, 7vw, 110px);
+    background: url("../assets/wave-footer-sand.svg") center top / cover no-repeat;
 }
 
 .footer-content {
