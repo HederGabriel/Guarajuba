@@ -1,0 +1,632 @@
+{
+  "schema_version": "1.0.0",
+  "trip": {
+    "id": "viagem-familia-bahia-2027",
+    "title": "Viagem em Família — Bahia 2027",
+    "start_date": "2027-01-08",
+    "end_date": "2027-01-12",
+    "duration_days": 5,
+    "destination": "Bahia",
+    "travelers": {
+      "total": 26,
+      "adults": 20,
+      "children": 6,
+      "children_age_range": {
+        "min": 6,
+        "max": 10
+      }
+    },
+    "accommodation": {
+      "name": "Casa da família",
+      "region": "Genipabu, Monte Gordo, Camaçari",
+      "state": "BA",
+      "location_id": "casa-hospedagem",
+      "google_maps_url": "https://www.google.com/maps?q=-12.6600833,-38.0906343",
+      "shared_google_maps_url": "https://maps.app.goo.gl/nXkrBSVicNjAvDePA?g_st=iwb",
+      "coordinates": {
+        "latitude": -12.6600833,
+        "longitude": -38.0906343
+      }
+    },
+    "origin": null,
+    "final_destination": {
+      "name": "Damianópolis",
+      "state": "GO",
+      "location_id": "damianopolis"
+    },
+    "summary": "Viagem em família com passeios por Guarajuba, Praia do Forte e Salvador, seguida de retorno com paradas em Bom Jesus da Lapa e Correntina."
+  },
+  "locations": [
+    {
+      "id": "casa-hospedagem",
+      "name": "Casa da hospedagem",
+      "category": "accommodation",
+      "address": "Genipabu, Monte Gordo, Camaçari, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps?q=-12.6600833,-38.0906343",
+      "coordinates": {
+        "latitude": -12.6600833,
+        "longitude": -38.0906343
+      }
+    },
+    {
+      "id": "genipabu",
+      "name": "Genipabu",
+      "category": "region",
+      "address": "Monte Gordo, Camaçari, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Genipabu%2C%20Monte%20Gordo%2C%20Cama%C3%A7ari%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "praia-do-porto",
+      "name": "Praia do Porto",
+      "category": "beach",
+      "address": "Guarajuba, Camaçari, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Praia%20do%20Porto%2C%20Guarajuba%2C%20Cama%C3%A7ari%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "bar-do-prefeitinho",
+      "name": "Bar do Prefeitinho",
+      "category": "restaurant",
+      "address": "Praia do Porto, Guarajuba, Camaçari, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bar%20do%20Prefeitinho%20Praia%20Guarajuba%2C%20Cama%C3%A7ari%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "vila-praia-do-forte",
+      "name": "Vila da Praia do Forte",
+      "category": "tourist_area",
+      "address": "Mata de São João, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Vila%20da%20Praia%20do%20Forte%2C%20Mata%20de%20S%C3%A3o%20Jo%C3%A3o%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "igreja-sao-francisco-praia-forte",
+      "name": "Igreja de São Francisco de Assis",
+      "category": "church",
+      "address": "Praia do Forte, Mata de São João, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Igreja%20de%20S%C3%A3o%20Francisco%20de%20Assis%2C%20Praia%20do%20Forte%2C%20Mata%20de%20S%C3%A3o%20Jo%C3%A3o%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "projeto-tamar",
+      "name": "Projeto Tamar",
+      "category": "attraction",
+      "address": "Praia do Forte, Mata de São João, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Projeto%20Tamar%20Praia%20do%20Forte%2C%20Mata%20de%20S%C3%A3o%20Jo%C3%A3o%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "papa-gente",
+      "name": "Restaurante Papa Gente",
+      "category": "restaurant",
+      "address": "Praia do Forte, Mata de São João, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurante%20Papa%20Gente%2C%20Praia%20do%20Forte%2C%20Mata%20de%20S%C3%A3o%20Jo%C3%A3o%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "bela-nordestina",
+      "name": "Restaurante Bela Nordestina",
+      "category": "restaurant",
+      "address": "Praia do Forte, Mata de São João, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Restaurante%20Bela%20Nordestina%2C%20Praia%20do%20Forte%2C%20Mata%20de%20S%C3%A3o%20Jo%C3%A3o%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "praia-do-lord",
+      "name": "Praia do Lord",
+      "category": "beach",
+      "address": "Praia do Forte, Mata de São João, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Praia%20do%20Lord%2C%20Praia%20do%20Forte%2C%20Mata%20de%20S%C3%A3o%20Jo%C3%A3o%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "pelourinho",
+      "name": "Pelourinho / Largo do Pelourinho",
+      "category": "tourist_area",
+      "address": "Salvador, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Largo%20do%20Pelourinho%2C%20Salvador%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "terreiro-de-jesus",
+      "name": "Terreiro de Jesus",
+      "category": "square",
+      "address": "Centro Histórico, Salvador, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Terreiro%20de%20Jesus%2C%20Centro%20Hist%C3%B3rico%2C%20Salvador%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "catedral-basilica-salvador",
+      "name": "Catedral Basílica de Salvador",
+      "category": "church",
+      "address": "Terreiro de Jesus, Salvador, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Catedral%20Bas%C3%ADlica%20de%20Salvador%2C%20Terreiro%20de%20Jesus%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "igreja-sao-francisco-salvador",
+      "name": "Igreja e Convento de São Francisco",
+      "category": "church",
+      "address": "Salvador, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Igreja%20e%20Convento%20de%20S%C3%A3o%20Francisco%2C%20Salvador%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "elevador-lacerda",
+      "name": "Elevador Lacerda",
+      "category": "attraction",
+      "address": "Salvador, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Elevador%20Lacerda%2C%20Salvador%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "mercado-modelo",
+      "name": "Mercado Modelo",
+      "category": "market",
+      "address": "Praça Visconde de Cayru, Salvador, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mercado%20Modelo%2C%20Pra%C3%A7a%20Visconde%20de%20Cayru%2C%20Salvador%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "maria-sao-pedro",
+      "name": "Restaurante Maria de São Pedro",
+      "category": "restaurant",
+      "address": "Mercado Modelo, Salvador, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Maria%20de%20S%C3%A3o%20Pedro%2C%20Mercado%20Modelo%2C%20Salvador%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "camafeu-oxossi",
+      "name": "Restaurante Camafeu de Oxóssi",
+      "category": "restaurant",
+      "address": "Mercado Modelo, Salvador, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Camafeu%20de%20Ox%C3%B3ssi%2C%20Mercado%20Modelo%2C%20Salvador%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "igreja-bonfim",
+      "name": "Igreja do Senhor do Bonfim",
+      "category": "church",
+      "address": "Salvador, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Igreja%20do%20Senhor%20do%20Bonfim%2C%20Salvador%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "farol-barra",
+      "name": "Farol da Barra / Museu Náutico da Bahia",
+      "category": "attraction",
+      "address": "Salvador, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Farol%20da%20Barra%2C%20Salvador%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "camacari",
+      "name": "Camaçari",
+      "category": "city",
+      "address": "Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Cama%C3%A7ari%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "santuario-bom-jesus-lapa",
+      "name": "Santuário do Bom Jesus da Lapa",
+      "category": "church",
+      "address": "Bom Jesus da Lapa, Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Santu%C3%A1rio%20do%20Bom%20Jesus%20da%20Lapa%2C%20Bom%20Jesus%20da%20Lapa%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "correntina",
+      "name": "Correntina",
+      "category": "city",
+      "address": "Bahia, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Correntina%2C%20Bahia%2C%20Brasil"
+    },
+    {
+      "id": "damianopolis",
+      "name": "Damianópolis",
+      "category": "city",
+      "address": "Goiás, Brasil",
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Damian%C3%B3polis%2C%20Goi%C3%A1s%2C%20Brasil"
+    }
+  ],
+  "days": [
+    {
+      "id": "2027-01-08",
+      "date": "2027-01-08",
+      "weekday": "sexta-feira",
+      "title": "Chegada",
+      "destination": "Genipabu",
+      "theme": null,
+      "activities": [
+        {
+          "id": "chegada",
+          "start_time": null,
+          "end_time": null,
+          "title": "Chegada à hospedagem",
+          "description": "Chegada à casa/hospedagem.",
+          "location_id": "casa-hospedagem"
+        },
+        {
+          "id": "acomodacao",
+          "start_time": null,
+          "end_time": null,
+          "title": "Acomodação",
+          "description": "Acomodação dos viajantes.",
+          "location_id": "casa-hospedagem"
+        },
+        {
+          "id": "compras",
+          "start_time": null,
+          "end_time": null,
+          "title": "Compras",
+          "description": "Realizar as compras necessárias.",
+          "location_id": null
+        },
+        {
+          "id": "piscina",
+          "start_time": null,
+          "end_time": null,
+          "title": "Piscina",
+          "description": "Tempo livre na piscina.",
+          "location_id": "casa-hospedagem"
+        },
+        {
+          "id": "jantar-familia",
+          "start_time": null,
+          "end_time": null,
+          "title": "Jantar em família",
+          "description": "Jantar em família.",
+          "location_id": "casa-hospedagem"
+        },
+        {
+          "id": "descanso",
+          "start_time": null,
+          "end_time": null,
+          "title": "Descanso",
+          "description": "Período de descanso.",
+          "location_id": "casa-hospedagem"
+        }
+      ],
+      "notes": [
+        "Não há horários definidos para as atividades deste dia."
+      ]
+    },
+    {
+      "id": "2027-01-09",
+      "date": "2027-01-09",
+      "weekday": "sábado",
+      "title": "Guarajuba",
+      "destination": "Guarajuba",
+      "theme": "Dia de praia em família",
+      "activities": [
+        {
+          "id": "saida-casa",
+          "start_time": "08:30",
+          "end_time": null,
+          "title": "Saída da casa",
+          "description": "Saída da hospedagem em Genipabu.",
+          "location_id": "casa-hospedagem"
+        },
+        {
+          "id": "chegada-praia-porto",
+          "start_time": "09:00",
+          "end_time": null,
+          "title": "Chegada à Praia do Porto",
+          "description": "Chegada à Praia do Porto, em Guarajuba.",
+          "location_id": "praia-do-porto"
+        },
+        {
+          "id": "praia-manha",
+          "start_time": "09:00",
+          "end_time": "12:00",
+          "title": "Praia e banho de mar",
+          "description": "Praia, banho de mar e tempo livre.",
+          "location_id": "praia-do-porto"
+        },
+        {
+          "id": "almoco-prefeitinho",
+          "start_time": "12:00",
+          "end_time": "14:30",
+          "title": "Almoço",
+          "description": "Almoço no Bar do Prefeitinho, à beira-mar.",
+          "location_id": "bar-do-prefeitinho"
+        },
+        {
+          "id": "praia-tarde",
+          "start_time": "14:30",
+          "end_time": "15:30",
+          "title": "Praia e fotos",
+          "description": "Aproveitar mais um pouco a praia e tirar fotos.",
+          "location_id": "praia-do-porto"
+        },
+        {
+          "id": "retorno-casa",
+          "start_time": "15:30",
+          "end_time": null,
+          "title": "Retorno para a casa",
+          "description": "Retorno à hospedagem.",
+          "location_id": "casa-hospedagem"
+        },
+        {
+          "id": "noite-livre",
+          "start_time": null,
+          "end_time": null,
+          "title": "Noite livre",
+          "description": "Piscina, descanso e confraternização.",
+          "location_id": "casa-hospedagem"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "2027-01-10",
+      "date": "2027-01-10",
+      "weekday": "domingo",
+      "title": "Praia do Forte",
+      "destination": "Praia do Forte",
+      "theme": "Vila, tartarugas e mar",
+      "activities": [
+        {
+          "id": "saida-casa",
+          "start_time": "08:30",
+          "end_time": null,
+          "title": "Saída da casa",
+          "description": "Saída da hospedagem.",
+          "location_id": "casa-hospedagem"
+        },
+        {
+          "id": "chegada-vila",
+          "start_time": "09:00",
+          "end_time": null,
+          "title": "Chegada à vila",
+          "description": "Chegada à Vila da Praia do Forte.",
+          "location_id": "vila-praia-do-forte"
+        },
+        {
+          "id": "passeio-vila",
+          "start_time": "09:00",
+          "end_time": "10:30",
+          "title": "Passeio pela vila",
+          "description": "Passeio pela vila, lojinhas e artesanato.",
+          "location_id": "vila-praia-do-forte"
+        },
+        {
+          "id": "igreja-praia-forte",
+          "start_time": "10:30",
+          "end_time": "11:00",
+          "title": "Visita à igreja",
+          "description": "Visita à Igreja de São Francisco de Assis.",
+          "location_id": "igreja-sao-francisco-praia-forte"
+        },
+        {
+          "id": "projeto-tamar",
+          "start_time": "11:00",
+          "end_time": "12:30",
+          "title": "Projeto Tamar",
+          "description": "Visita ao Projeto Tamar, dedicado à preservação das tartarugas.",
+          "location_id": "projeto-tamar"
+        },
+        {
+          "id": "almoco-vila",
+          "start_time": "12:30",
+          "end_time": "14:00",
+          "title": "Almoço na vila",
+          "description": "Sugestões de restaurante: Papa Gente ou Bela Nordestina.",
+          "location_id": "vila-praia-do-forte",
+          "suggested_location_ids": [
+            "papa-gente",
+            "bela-nordestina"
+          ]
+        },
+        {
+          "id": "praia-lord",
+          "start_time": "14:00",
+          "end_time": "16:00",
+          "title": "Praia do Lord",
+          "description": "Banho de mar e piscinas naturais, se a maré permitir.",
+          "location_id": "praia-do-lord"
+        },
+        {
+          "id": "retorno-casa",
+          "start_time": "16:00",
+          "end_time": "16:30",
+          "title": "Retorno para a casa",
+          "description": "Retorno à hospedagem.",
+          "location_id": "casa-hospedagem"
+        }
+      ],
+      "notes": [
+        "A visita à Praia do Lord e o acesso às piscinas naturais dependem das condições da maré."
+      ]
+    },
+    {
+      "id": "2027-01-11",
+      "date": "2027-01-11",
+      "weekday": "segunda-feira",
+      "title": "Salvador",
+      "destination": "Salvador",
+      "theme": "História, cultura e cartões-postais",
+      "activities": [
+        {
+          "id": "saida-genipabu",
+          "start_time": "07:00",
+          "end_time": null,
+          "title": "Saída de Genipabu",
+          "description": "Saída da hospedagem.",
+          "location_id": "casa-hospedagem"
+        },
+        {
+          "id": "chegada-pelourinho",
+          "start_time": "08:30",
+          "end_time": null,
+          "title": "Chegada ao Pelourinho",
+          "description": "Passeio e fotos nos casarões históricos.",
+          "location_id": "pelourinho"
+        },
+        {
+          "id": "terreiro-catedral",
+          "start_time": "09:30",
+          "end_time": null,
+          "title": "Terreiro de Jesus e Catedral",
+          "description": "Visita ao Terreiro de Jesus e à Catedral Basílica de Salvador.",
+          "location_id": "terreiro-de-jesus",
+          "related_location_ids": [
+            "catedral-basilica-salvador"
+          ]
+        },
+        {
+          "id": "igreja-sao-francisco",
+          "start_time": "10:00",
+          "end_time": null,
+          "title": "Igreja e Convento de São Francisco",
+          "description": "Visita conforme horário de funcionamento.",
+          "location_id": "igreja-sao-francisco-salvador"
+        },
+        {
+          "id": "elevador-lacerda",
+          "start_time": "11:30",
+          "end_time": null,
+          "title": "Elevador Lacerda",
+          "description": "Descida para a Cidade Baixa.",
+          "location_id": "elevador-lacerda"
+        },
+        {
+          "id": "almoco-mercado-modelo",
+          "start_time": "12:00",
+          "end_time": "13:30",
+          "title": "Almoço no Mercado Modelo",
+          "description": "Sugestões: Maria de São Pedro ou Camafeu de Oxóssi.",
+          "location_id": "mercado-modelo",
+          "suggested_location_ids": [
+            "maria-sao-pedro",
+            "camafeu-oxossi"
+          ]
+        },
+        {
+          "id": "compras-salvador",
+          "start_time": "13:30",
+          "end_time": "14:00",
+          "title": "Compras e tempo livre",
+          "description": "Tempo livre para compras de lembranças e artesanato.",
+          "location_id": "mercado-modelo"
+        },
+        {
+          "id": "igreja-bonfim",
+          "start_time": "14:00",
+          "end_time": "15:00",
+          "title": "Igreja do Senhor do Bonfim",
+          "description": "Visita à igreja, fitinhas e tradição.",
+          "location_id": "igreja-bonfim"
+        },
+        {
+          "id": "farol-barra",
+          "start_time": "15:30",
+          "end_time": "16:30",
+          "title": "Farol da Barra",
+          "description": "Fotos, caminhada e vista do mar.",
+          "location_id": "farol-barra"
+        },
+        {
+          "id": "retorno-casa",
+          "start_time": "16:30",
+          "end_time": "17:00",
+          "title": "Retorno para a casa",
+          "description": "Retorno à hospedagem.",
+          "location_id": "casa-hospedagem"
+        }
+      ],
+      "notes": [
+        "A visita interna à Igreja e ao Convento de São Francisco depende do horário de funcionamento."
+      ]
+    },
+    {
+      "id": "2027-01-12",
+      "date": "2027-01-12",
+      "weekday": "terça-feira",
+      "title": "Retorno",
+      "destination": "Damianópolis/GO",
+      "theme": null,
+      "activities": [
+        {
+          "id": "saida-camacari",
+          "start_time": null,
+          "end_time": null,
+          "title": "Saída de Camaçari",
+          "description": "Saída de Camaçari/BA com destino a Damianópolis/GO.",
+          "location_id": "camacari"
+        },
+        {
+          "id": "parada-bom-jesus-lapa",
+          "start_time": null,
+          "end_time": null,
+          "title": "Parada em Bom Jesus da Lapa",
+          "description": "Parada ou visita em Bom Jesus da Lapa/BA.",
+          "location_id": "santuario-bom-jesus-lapa"
+        },
+        {
+          "id": "passagem-correntina",
+          "start_time": null,
+          "end_time": null,
+          "title": "Passagem por Correntina",
+          "description": "Passagem por Correntina/BA.",
+          "location_id": "correntina"
+        },
+        {
+          "id": "chegada-damianopolis",
+          "start_time": null,
+          "end_time": null,
+          "title": "Chegada a Damianópolis",
+          "description": "Continuação da viagem até Damianópolis/GO.",
+          "location_id": "damianopolis"
+        }
+      ],
+      "notes": [
+        "O retorno com paradas em Bom Jesus da Lapa e Correntina é um percurso muito longo.",
+        "Planejar pernoite e revezamento de motoristas.",
+        "Não tentar realizar todo o trajeto com visitas no mesmo dia."
+      ]
+    }
+  ],
+  "checklist": [
+    {
+      "id": "reservar-restaurantes",
+      "title": "Confirmar reservas dos restaurantes para 26 pessoas",
+      "status": "pending"
+    },
+    {
+      "id": "consultar-mare",
+      "title": "Conferir a tábua de marés da Praia do Lord",
+      "status": "pending"
+    },
+    {
+      "id": "verificar-tamar-igrejas",
+      "title": "Verificar horários de funcionamento do Projeto Tamar e das igrejas",
+      "status": "pending"
+    },
+    {
+      "id": "organizar-carros",
+      "title": "Organizar os carros e os pontos de encontro",
+      "status": "pending"
+    }
+  ],
+  "alerts": [
+    {
+      "id": "alerta-retorno-longo",
+      "severity": "high",
+      "title": "Retorno com percurso longo",
+      "message": "O retorno com paradas em Bom Jesus da Lapa e Correntina é muito longo. Planejar pernoite e revezamento de motoristas; não tentar fazer todo o trajeto com visitas no mesmo dia."
+    },
+    {
+      "id": "alerta-mare",
+      "severity": "warning",
+      "title": "Condições da maré",
+      "message": "O passeio à Praia do Lord e o acesso às piscinas naturais dependem das condições da maré.",
+      "date": "2027-01-10",
+      "start_time": "14:00",
+      "end_time": "16:00"
+    },
+    {
+      "id": "alerta-funcionamento",
+      "severity": "warning",
+      "title": "Horários de visitação",
+      "message": "A visita interna à Igreja e ao Convento de São Francisco e as visitas ao Projeto Tamar e às igrejas dependem dos horários de funcionamento."
+    },
+    {
+      "id": "alerta-reservas",
+      "severity": "info",
+      "title": "Restaurantes sugeridos",
+      "message": "Os restaurantes Papa Gente, Bela Nordestina, Maria de São Pedro e Camafeu de Oxóssi são sugestões do roteiro; não há confirmação de reserva."
+    }
+  ],
+  "metadata": {
+    "source": [
+      "Roteiro Semana.jpeg",
+      "Roteiro Diario.jpeg"
+    ],
+    "generated_from": "Transcrição e padronização das informações presentes nas duas imagens fornecidas pelo usuário.",
+    "missing_values_convention": "null representa informação não definida ou não informada na fonte.",
+    "location_links_note": "Os links do Google Maps são links de pesquisa/localização. A casa da hospedagem usa as coordenadas compartilhadas pelo usuário.",
+    "closing_message": "Que seja uma viagem abençoada, cheia de alegria e boas lembranças!"
+  }
+}

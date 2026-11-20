@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#075b70">
+    <meta name="description" content="Guia da viagem em família para a Bahia — janeiro de 2027.">
+    <title>Bahia 2027 | Viagem em Família</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/data.js" defer></script>
+    <script src="./js/app.js" defer></script>
+</head>
+
+<body>
+    <header class="hero" id="inicio">
+        <nav class="nav container" aria-label="Navegação principal">
+            <a class="brand" href="#inicio"><span class="brand-mark">✳</span><span>nossa viagem<span
+                        class="brand-sub">EM FAMÍLIA</span></span></a>
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links"
+                aria-label="Abrir menu">☰</button>
+            <div class="nav-links" id="nav-links"><a href="#roteiro">Roteiro</a><a
+                    href="#localizacoes">Localizações</a><a href="#organizacao">Organização</a></div>
+        </nav>
+        <div class="hero-content container">
+            <p class="eyebrow" id="hero-dates">08 A 12 DE JANEIRO</p>
+            <h1>Bahia <span>2027</span></h1>
+            <p class="hero-lead">Dias de sol, praia e boas lembranças.</p>
+            <p class="hero-description" id="hero-summary">Uma viagem para aproveitar cada momento juntos.</p>
+            <a class="button button-light" href="#roteiro">Explorar o roteiro <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-bottom-wave" aria-hidden="true"></div>
+        <div class="hero-stamp"><span>☀</span><small>26 viajantes<br>uma só família</small></div>
+    </header>
+    <main>
+        <section class="section container">
+            <div class="section-heading centered"><span class="eyebrow eyebrow-blue">VAMOS NESSA?</span>
+                <h2>Uma viagem, muitas histórias.</h2>
+                <p>Horários, passeios e endereços para todo mundo acompanhar.</p>
+            </div>
+            <div class="stats-grid">
+                <article class="stat-card"><span class="stat-icon">♧</span><strong
+                        data-stat="travelers">—</strong><span>viajantes</span></article>
+                <article class="stat-card"><span class="stat-icon">☼</span><strong data-stat="days">—</strong><span>dias
+                        de viagem</span></article>
+                <article class="stat-card"><span class="stat-icon">⌖</span><strong
+                        data-stat="locations">—</strong><span>localizações</span></article>
+            </div>
+            <article class="stay-card">
+                <div class="stay-icon">⌖</div>
+                <div class="stay-copy"><span class="eyebrow eyebrow-blue">NOSSO PONTO DE PARTIDA</span>
+                    <h3 id="stay-name">Nossa hospedagem</h3>
+                    <p id="stay-address">Carregando localização...</p>
+                </div><a class="button button-primary" id="stay-map" href="#" target="_blank" rel="noopener">Abrir no
+                    Maps ↗</a>
+            </article>
+        </section>
+        <section class="itinerary-section section" id="roteiro">
+            <div class="container">
+                <div class="section-heading"><span class="eyebrow eyebrow-blue">PROGRAMAÇÃO</span>
+                    <h2>O roteiro da viagem</h2>
+                    <p>Escolha um dia para conferir a programação completa.</p>
+                </div>
+                <div class="day-tabs" id="day-tabs" role="tablist" aria-label="Dias da viagem"></div>
+                <div class="day-panel" id="day-panel" aria-live="polite">
+                    <div class="loading-state">Carregando roteiro...</div>
+                </div>
+            </div>
+        </section>
+        <section class="section container" id="localizacoes">
+            <div class="section-heading"><span class="eyebrow eyebrow-blue">CHEGAR É FÁCIL</span>
+                <h2>Onde vamos?</h2>
+                <p>Toque em “Abrir no Maps” para iniciar a navegação.</p>
+            </div>
+            <div class="location-filters" id="location-filters"></div>
+            <div class="locations-grid" id="locations-grid">
+                <div class="loading-state">Carregando localizações...</div>
+            </div>
+        </section>
+        <section class="organization-section section" id="organizacao">
+            <div class="container organization-grid">
+                <div><span class="eyebrow eyebrow-blue">ANTES DE SAIR</span>
+                    <h2>Deixar tudo<br>em ordem.</h2>
+                    <p class="muted">Acompanhe os preparativos e avisos importantes.</p>
+                    <div class="progress-wrap">
+                        <div class="progress-label"><span>Preparativos</span><strong id="check-progress">0/0
+                                concluídos</strong></div>
+                        <div class="progress-track"><span id="check-progress-bar"></span></div>
+                    </div>
+                    <div class="checklist" id="checklist"></div>
+                </div>
+                <aside class="alerts-card">
+                    <div class="alerts-heading"><span class="alert-sun">!</span>
+                        <div><span class="eyebrow">FIQUE ATENTO</span>
+                            <h3>Informações importantes</h3>
+                        </div>
+                    </div>
+                    <div id="alerts-list">
+                        <p class="muted">Carregando avisos...</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-wave"></div>
+        <div class="container footer-content">
+            <div class="footer-logo">Bahia <span>2027</span></div>
+            <p id="footer-message">Que seja uma viagem cheia de alegria e boas lembranças!</p><a href="#inicio"
+                class="back-top">Voltar ao início ↑</a><small>Feito para a nossa família · <span
+                    id="last-updated">Atualizando dados...</span></small>
+        </div>
+    </footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>
