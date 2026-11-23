@@ -1,0 +1,11 @@
+{
+  "name": "Guarajuba — Viagem em Família",
+  "short_name": "Guarajuba 2027",
+  "description": "Roteiro da viagem em família à Bahia.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#075b70",
+  "icons": []
+}

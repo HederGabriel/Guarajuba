@@ -1,10 +1,10 @@
 :root {
     --ocean: #075b70;
     --deep: #063e54;
-    --turquoise: #25a9b6;
+    --turquoise: #13808c;
     --sand: #f8f2e7;
     --ink: #173b45;
-    --muted: #71858a;
+    --muted: #52666b;
     --shadow: 0 18px 55px rgba(15, 64, 73, .10);
     --radius: 22px
 }
@@ -928,3 +928,31 @@ button {
         transition-duration: .01ms !important
     }
 }
+/* Ajustes de acessibilidade e uso em viagem */
+:where(button, a, input, [tabindex]):focus-visible { outline: 3px solid #e4a64d; outline-offset: 3px; }
+button, .button, .day-tab, .filter-chip { min-height: 44px; }
+.day-tabs { position: relative; }
+.today-badge { display: inline-block; margin-left: 5px; padding: 2px 6px; border-radius: 999px; background: #e4a64d; color: #173b45; font-size: 12px; vertical-align: middle; }
+.day-tab[aria-selected=true] .today-badge { background: #fff; color: #075b70; }
+.share-button { display: flex; margin: 0 auto 24px; }
+@media (max-width: 760px) {
+  .day-tabs { position: sticky; top: 0; z-index: 8; background: #f4faf9; padding: 8px 2px 12px; }
+}
+@media print {
+  .nav, .menu-toggle, .hero-stamp, .share-button, .location-filters, .back-top, .toast { display: none !important; }
+  body, .itinerary-section, .organization-section { background: white !important; color: black; }
+  .section { padding: 16px 0; }
+  .day-panel, .location-card, .alerts-card { box-shadow: none; break-inside: avoid; }
+  a { text-decoration: none; }
+}
+
+.eyebrow, .brand-sub, .nav-links a, .hero-stamp small, .stat-card span:last-child,
+.day-tab span, .activity-time, .text-link, .filter-chip, .location-type,
+.location-card .button, .progress-label, .check-item, .alert-item strong,
+.alert-item p, .back-top, .footer-content small, .toast, .loading-state, .empty-state {
+  font-size: max(14px, 1em);
+}
+
+.location-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+.location-card .location-actions .button { margin-top: 0; align-self: auto; }
+.button-secondary { color: var(--ocean); background: #eaf6f4; }

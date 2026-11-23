@@ -21,12 +21,8 @@
       "region": "Genipabu, Monte Gordo, Camaçari",
       "state": "BA",
       "location_id": "casa-hospedagem",
-      "google_maps_url": "https://www.google.com/maps?q=-12.6600833,-38.0906343",
-      "shared_google_maps_url": "https://maps.app.goo.gl/nXkrBSVicNjAvDePA?g_st=iwb",
-      "coordinates": {
-        "latitude": -12.6600833,
-        "longitude": -38.0906343
-      }
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Genipabu%2C+Monte+Gordo%2C+Cama%C3%A7ari%2C+Bahia%2C+Brasil",
+      "shared_google_maps_url": "https://maps.app.goo.gl/nXkrBSVicNjAvDePA?g_st=iwb"
     },
     "origin": null,
     "final_destination": {
@@ -42,11 +38,7 @@
       "name": "Casa da hospedagem",
       "category": "accommodation",
       "address": "Genipabu, Monte Gordo, Camaçari, Bahia, Brasil",
-      "google_maps_url": "https://www.google.com/maps?q=-12.6600833,-38.0906343",
-      "coordinates": {
-        "latitude": -12.6600833,
-        "longitude": -38.0906343
-      }
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Genipabu%2C+Monte+Gordo%2C+Cama%C3%A7ari%2C+Bahia%2C+Brasil"
     },
     {
       "id": "genipabu",
@@ -627,6 +619,7 @@
     "generated_from": "Transcrição e padronização das informações presentes nas duas imagens fornecidas pelo usuário.",
     "missing_values_convention": "null representa informação não definida ou não informada na fonte.",
     "location_links_note": "Os links do Google Maps são links de pesquisa/localização. A casa da hospedagem usa as coordenadas compartilhadas pelo usuário.",
-    "closing_message": "Que seja uma viagem abençoada, cheia de alegria e boas lembranças!"
+    "closing_message": "Que seja uma viagem abençoada, cheia de alegria e boas lembranças!",
+    "updated_at": "2026-11-23T13:06:00-03:00"
   }
 }

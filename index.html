@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="#075b70">
     <meta name="description" content="Guia da viagem em família para a Bahia — janeiro de 2027.">
+    <meta name="robots" content="noindex,nofollow">
+    <meta property="og:title" content="Bahia 2027 | Viagem em Família">
+    <meta property="og:description" content="Roteiro, passeios e informações para a viagem em família à Bahia, em janeiro de 2027.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://hedergabriel.github.io/Guarajuba/assets/bahia-hero.svg">
+    <meta property="og:image:alt" content="Ilustração da viagem à Bahia">
     <title>Bahia 2027 | Viagem em Família</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +20,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="manifest" href="./manifest.webmanifest">\n    <link rel="stylesheet" href="./css/style.css">
     <script src="./js/data.js" defer></script>
     <script src="./js/app.js" defer></script>
 </head>
@@ -37,7 +43,7 @@
             <a class="button button-light" href="#roteiro">Explorar o roteiro <span aria-hidden="true">↓</span></a>
         </div>
         <div class="hero-bottom-wave" aria-hidden="true"></div>
-        <div class="hero-stamp"><span>☀</span><small>26 viajantes<br>uma só família</small></div>
+        <div class="hero-stamp"><span>☀</span><small><span id="hero-travelers">—</span> viajantes<br>uma só família</small></div>
     </header>
     <main>
         <section class="section container">
@@ -69,7 +75,7 @@
                     <p>Escolha um dia para conferir a programação completa.</p>
                 </div>
                 <div class="day-tabs" id="day-tabs" role="tablist" aria-label="Dias da viagem"></div>
-                <div class="day-panel" id="day-panel" aria-live="polite">
+                <div class="day-panel" id="day-panel" role="tabpanel" tabindex="0" aria-labelledby="day-tab-0" aria-live="polite">
                     <div class="loading-state">Carregando roteiro...</div>
                 </div>
             </div>
@@ -112,13 +118,13 @@
     <footer class="footer">
         <div class="footer-wave"></div>
         <div class="container footer-content">
-            <div class="footer-logo">Bahia <span>2027</span></div>
+            <div class="footer-logo" id="footer-title">Bahia <span>2027</span></div>
             <p id="footer-message">Que seja uma viagem cheia de alegria e boas lembranças!</p><a href="#inicio"
                 class="back-top">Voltar ao início ↑</a><small>Feito para a nossa família · <span
                     id="last-updated">Atualizando dados...</span></small>
         </div>
     </footer>
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <button class="button button-primary share-button" id="share-button" type="button">Compartilhar roteiro</button>\n    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 
 </html>
