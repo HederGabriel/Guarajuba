@@ -956,3 +956,27 @@ button, .button, .day-tab, .filter-chip { min-height: 44px; }
 .location-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
 .location-card .location-actions .button { margin-top: 0; align-self: auto; }
 .button-secondary { color: var(--ocean); background: #eaf6f4; }
+
+/* Exportação do dia selecionado: usa a impressão nativa do navegador */
+@media print {
+  @page { size: auto; margin: 14mm; }
+  body.print-selected-day * { visibility: hidden !important; }
+  body.print-selected-day #day-panel,
+  body.print-selected-day #day-panel * { visibility: visible !important; }
+  body.print-selected-day #day-panel {
+    position: absolute !important;
+    inset: 0 auto auto 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    background: white !important;
+    color: black !important;
+  }
+  body.print-selected-day #day-panel a { color: black !important; }
+  body.print-selected-day #day-panel .activity-card,
+  body.print-selected-day #day-panel .check-item { break-inside: avoid; }
+  body.print-selected-day .export-day-button,
+  body.print-selected-day .share-button { display: none !important; }
+}

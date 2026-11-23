@@ -88,6 +88,11 @@
       next = e.key === "Home" ? 0 : e.key === "End" ? tabs.length - 1 : (next + (e.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
       e.preventDefault(); tabs[next]?.click(); tabs[next]?.focus();
     });
+    $("#export-day-button").addEventListener("click", () => {
+      document.body.classList.add("print-selected-day");
+      window.print();
+    });
+    window.addEventListener("afterprint", () => document.body.classList.remove("print-selected-day"));
     $("#share-button").addEventListener("click", async () => {
       const shareData = { title: document.title, text: "Roteiro da viagem em família à Bahia.", url: location.href };
       try { if (navigator.share) await navigator.share(shareData); else if (navigator.clipboard) { await navigator.clipboard.writeText(location.href); $("#toast").textContent = "Link copiado."; $("#toast").classList.add("show"); } }
