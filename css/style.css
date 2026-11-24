@@ -1,10 +1,10 @@
 :root {
     --ocean: #075b70;
     --deep: #063e54;
-    --turquoise: #25a9b6;
+    --turquoise: #13808c;
     --sand: #f8f2e7;
     --ink: #173b45;
-    --muted: #71858a;
+    --muted: #52666b;
     --shadow: 0 18px 55px rgba(15, 64, 73, .10);
     --radius: 22px
 }
@@ -88,6 +88,7 @@ button {
 
 .nav-links {
     display: flex;
+    align-items: center;
     gap: 34px
 }
 
@@ -804,6 +805,12 @@ button {
         padding: 13px 17px
     }
 
+    .nav-links .nav-share {
+        margin: 8px 10px 12px;
+        width: calc(100% - 20px);
+        justify-content: center
+    }
+
     .hero-content {
         padding-top: 115px
     }
@@ -886,6 +893,11 @@ button {
         display: block
     }
 
+    .day-head-side {
+        justify-content: flex-start;
+        margin-top: 12px
+    }
+
     .activity {
         grid-template-columns: 76px 1fr;
         gap: 11px;
@@ -926,5 +938,384 @@ button {
     *::after {
         scroll-behavior: auto !important;
         transition-duration: .01ms !important
+    }
+}
+
+/* Ajustes de acessibilidade e uso em viagem */
+:where(button, a, input, [tabindex]):focus-visible {
+    outline: 3px solid #e4a64d;
+    outline-offset: 3px;
+}
+
+button,
+.button,
+.day-tab,
+.filter-chip {
+    min-height: 44px;
+}
+
+.day-tabs {
+    position: relative;
+}
+
+.today-badge {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 2px 6px;
+    border-radius: 999px;
+    background: #e4a64d;
+    color: #173b45;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.day-tab[aria-selected=true] .today-badge {
+    background: #fff;
+    color: #075b70;
+}
+
+.share-button {
+    display: flex;
+    margin: 0 auto 24px;
+}
+
+.nav-share {
+    padding: 9px 16px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.day-head-side {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.export-day-button {
+    white-space: nowrap;
+}
+
+.toast.hiding {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+    transition: opacity .3s ease, transform .3s ease;
+}
+
+@media (max-width: 760px) {
+    .day-tabs {
+        position: sticky;
+        top: 0;
+        z-index: 8;
+        background: #f4faf9;
+        padding: 8px 2px 12px;
+    }
+}
+
+.eyebrow,
+.brand-sub,
+.nav-links a,
+.hero-stamp small,
+.stat-card span:last-child,
+.day-tab span,
+.activity-time,
+.text-link,
+.filter-chip,
+.location-type,
+.location-card .button,
+.progress-label,
+.check-item,
+.alert-item strong,
+.alert-item p,
+.back-top,
+.footer-content small,
+.toast,
+.loading-state,
+.empty-state {
+    font-size: max(14px, 1em);
+}
+
+.location-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.location-card .location-actions .button {
+    margin-top: 0;
+    align-self: auto;
+}
+
+.button-secondary {
+    color: var(--ocean);
+    background: #eaf6f4;
+}
+
+@media print {
+    @page {
+        size: A4 portrait;
+        margin: 12mm
+    }
+
+    html,
+    body {
+        width: auto;
+        min-width: 0;
+        margin: 0;
+        color: #173b45 !important;
+        background: white !important;
+        font: 10pt/1.4 Arial, sans-serif
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        transition: none !important
+    }
+
+    .nav,
+    .menu-toggle,
+    .hero-stamp,
+    .hero-bottom-wave,
+    .hero-content .button,
+    .share-button,
+    .location-filters,
+    .back-top,
+    .toast,
+    button {
+        display: none !important
+    }
+
+    .hero {
+        min-height: 0;
+        overflow: visible;
+        color: #173b45;
+        background: white !important
+    }
+
+    .hero-content {
+        max-width: none;
+        padding: 8px 0 16px;
+        text-align: left
+    }
+
+    .hero .eyebrow {
+        color: #13808c
+    }
+
+    .hero h1 {
+        margin: 5px 0;
+        color: #063e54;
+        font-size: 32pt;
+        letter-spacing: 0;
+        text-shadow: none
+    }
+
+    .hero h1 span {
+        color: #13808c
+    }
+
+    .hero-lead {
+        margin: 0 0 4px;
+        font-size: 16pt
+    }
+
+    .hero-description {
+        margin: 0;
+        color: #52666b
+    }
+
+    .section,
+    .organization-section {
+        padding: 18px 0;
+        background: white !important
+    }
+
+    .section-heading {
+        margin-bottom: 14px
+    }
+
+    .section-heading h2,
+    .organization-grid h2 {
+        color: #063e54;
+        font-size: 20pt
+    }
+
+    .section-heading p,
+    .muted {
+        color: #52666b
+    }
+
+    .stats-grid {
+        gap: 8px;
+        margin-bottom: 12px
+    }
+
+    .stat-card,
+    .stay-card,
+    .day-panel,
+    .location-card,
+    .alerts-card {
+        border: 1px solid #dce5e3;
+        background: white !important
+    }
+
+    .stat-card {
+        padding: 8px
+    }
+
+    .stay-card {
+        padding: 12px;
+        border-radius: 10px
+    }
+
+    .itinerary-section {
+        background: white !important
+    }
+
+    .day-tabs,
+    .export-day-button {
+        display: none !important
+    }
+
+    .day-panel {
+        min-height: 0;
+        padding: 16px;
+        border-radius: 12px;
+        break-inside: auto
+    }
+
+    .day-panel-head {
+        padding-bottom: 12px;
+        margin-bottom: 0
+    }
+
+    .day-panel-head h3 {
+        color: #063e54;
+        font-size: 19pt
+    }
+
+    .activity {
+        grid-template-columns: 72px minmax(0, 1fr) auto;
+        gap: 10px;
+        padding: 10px 0;
+        break-inside: avoid
+    }
+
+    .activity-time {
+        padding: 5px;
+        border: 1px solid #dce5e3;
+        background: white !important
+    }
+
+    .activity h4,
+    .location-card h3 {
+        color: #063e54
+    }
+
+    .activity p,
+    .location-card p,
+    .alert-item p {
+        color: #52666b
+    }
+
+    .day-notes {
+        border: 1px solid #ead9b9;
+        background: white !important
+    }
+
+    .locations-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px
+    }
+
+    .location-card {
+        min-height: 0;
+        padding: 12px;
+        border-radius: 10px;
+        break-inside: avoid
+    }
+
+    .location-actions {
+        display: none !important
+    }
+
+    .organization-grid {
+        gap: 24px
+    }
+
+    .alerts-card {
+        padding: 14px;
+        border-radius: 12px;
+        break-inside: avoid
+    }
+
+    .footer {
+        padding: 20px 0;
+        color: #173b45;
+        background: white !important
+    }
+
+    .footer-wave {
+        display: none
+    }
+
+    .footer-content p,
+    .footer-content small {
+        color: #52666b
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none
+    }
+
+    .eyebrow,
+    .brand-sub,
+    .hero-stamp small,
+    .stat-card span:last-child,
+    .day-tab span,
+    .activity-time,
+    .text-link,
+    .location-type,
+    .progress-label,
+    .check-item,
+    .alert-item strong,
+    .alert-item p,
+    .footer-content small {
+        font-size: 9pt !important
+    }
+
+    body.print-selected-day>header,
+    body.print-selected-day>footer,
+    body.print-selected-day>.toast,
+    body.print-selected-day>main>section:not(#roteiro) {
+        display: none !important
+    }
+
+    body.print-selected-day #roteiro {
+        padding: 0 !important;
+        background: white !important
+    }
+
+    body.print-selected-day #roteiro>.container {
+        width: auto;
+        margin: 0
+    }
+
+    body.print-selected-day #roteiro .section-heading,
+    body.print-selected-day #day-tabs {
+        display: none !important
+    }
+
+    body.print-selected-day #day-panel {
+        padding: 0;
+        border: 0;
+        border-radius: 0
     }
 }
