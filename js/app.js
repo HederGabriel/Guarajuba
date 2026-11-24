@@ -10,7 +10,7 @@
     $("#hero-dates").textContent = `${TripData.formatDate(t.start_date).toUpperCase()} A ${TripData.formatDate(t.end_date).toUpperCase()}`;
     $("#hero-summary").textContent = t.summary || "Uma viagem para aproveitar cada momento juntos.";
     $("#hero-travelers").textContent = t.travelers?.total ?? "—";
-    $("#footer-title").innerHTML = `${esc(t.destination || "Viagem")} <span>${esc((t.start_date || "").slice(0,4))}</span>`;
+    $("#footer-title").innerHTML = `${esc(t.destination || "Viagem")} <span>${esc((t.start_date || "").slice(0, 4))}</span>`;
     $('[data-stat="travelers"]').textContent = t.travelers?.total ?? "—";
     $('[data-stat="days"]').textContent = t.duration_days ?? d.days.length;
     $('[data-stat="locations"]').textContent = d.locations.length;
@@ -27,7 +27,7 @@
     $("#day-tabs").innerHTML = d.days.map((day, i) => `<button class="day-tab" id="day-tab-${i}" role="tab" type="button" aria-controls="day-panel" aria-selected="${i === state.day}" tabindex="${i === state.day ? 0 : -1}" data-day="${i}"><strong>${esc(day.title)}${day.date === today ? ' <span class="today-badge">Hoje</span>' : ""}</strong><span>${esc(TripData.formatDate(day.date, { day: "2-digit", month: "2-digit" }))} · ${esc(day.weekday)}</span></button>`).join("");
     $("#day-tabs").onclick = e => { const b = e.target.closest("[data-day]"); if (b) { state.day = +b.dataset.day; state.picked = true; days(state.data); } };
     const day = d.days[state.day]; $("#day-panel").setAttribute("aria-labelledby", `day-tab-${state.day}`); if (!day) { $("#day-panel").innerHTML = '<div class="empty-state">Nenhum dia cadastrado.</div>'; return; }
-    $("#day-panel").innerHTML = `<div class="day-panel-head"><div><span class="eyebrow eyebrow-blue">${esc(day.weekday)} · ${esc(TripData.formatDate(day.date))}</span><h3>${esc(day.title)}</h3><p>${esc(day.theme || day.destination || "")}</p></div><span class="location-type">${day.activities.length} ${day.activities.length === 1 ? "atividade" : "atividades"}</span></div>
+    $("#day-panel").innerHTML = `<div class="day-panel-head"><div><span class="eyebrow eyebrow-blue">${esc(day.weekday)} · ${esc(TripData.formatDate(day.date))}</span><h3>${esc(day.title)}</h3><p>${esc(day.theme || day.destination || "")}</p></div><div class="day-head-side"><span class="location-type">${day.activities.length} ${day.activities.length === 1 ? "atividade" : "atividades"}</span><button class="button button-secondary export-day-button" id="export-day-button" type="button">Exportar dia (PDF)</button></div></div>
     <ul class="activity-list">${day.activities.map(a => { const loc = TripData.getLocation(d, a.location_id), url = TripData.mapsUrl(loc), time = a.start_time ? `${a.start_time}${a.end_time ? "–" + a.end_time : ""}` : "A definir"; return `<li class="activity"><span class="activity-time">${esc(time)}</span><div><h4>${esc(a.title)}</h4><p>${esc(a.description)}</p></div>${url ? `<a class="text-link" href="${esc(url)}" target="_blank" rel="noopener">Ver mapa ↗</a>` : ""}</li>` }).join("")}</ul>
     ${day.notes?.length ? `<div class="day-notes"><strong>Observações</strong><ul>${day.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul></div>` : ""}`;
   }
@@ -42,8 +42,8 @@
     }).join("") || '<div class="empty-state">Nenhum local nesta categoria.</div>';
     $("#locations-grid").onclick = async e => {
       const b = e.target.closest("[data-copy-address]"); if (!b) return;
-      try { await navigator.clipboard.writeText(b.dataset.copyAddress); const toast = $("#toast"); toast.textContent = "Endereço copiado."; toast.classList.add("show"); }
-      catch { const toast = $("#toast"); toast.textContent = "Não foi possível copiar. Selecione o endereço manualmente."; toast.classList.add("show"); }
+      try { await navigator.clipboard.writeText(b.dataset.copyAddress); showToast("Endereço copiado."); }
+      catch { showToast("Não foi possível copiar. Selecione o endereço manualmente."); }
     };
   }
   function checklist(d) {
@@ -61,13 +61,25 @@
     overview(d); days(d); locations(d); checklist(d); alerts(d);
     const updated = d.metadata?.updated_at; $("#last-updated").textContent = updated ? `Dados atualizados em ${new Intl.DateTimeFormat("pt-BR", { dateStyle: "short", timeStyle: "short" }).format(new Date(updated))}` : "Data de atualização não informada";
   }
+  let toastTimer;
+  function showToast(message, duration = 3000) {
+    const t = $("#toast");
+    clearTimeout(toastTimer);
+    t.textContent = message;
+    t.classList.remove("hiding");
+    t.classList.add("show");
+    toastTimer = setTimeout(() => {
+      t.classList.add("hiding");
+      setTimeout(() => { t.classList.remove("show", "hiding"); }, 300);
+    }, duration);
+  }
   async function refresh(silent = false) {
     try {
       const fresh = await TripData.load();
       const signature = JSON.stringify(fresh);
       if (signature !== state.signature) { state.signature = signature; render(fresh); }
     }
-    catch (err) { console.error(err); if (!state.data) $("#day-panel").innerHTML = `<div class="empty-state">${esc(err.message)} Abra o site por um servidor local e confira se roteiro.json está na raiz.</div>`; else if (!silent) { const t = $("#toast"); t.textContent = "Falha ao atualizar o roteiro."; t.classList.add("show"); setTimeout(() => t.classList.remove("show"), 2200); } }
+    catch (err) { console.error(err); if (!state.data) $("#day-panel").innerHTML = `<div class="empty-state">${esc(err.message)} Abra o site por um servidor local e confira se roteiro.json está na raiz.</div>`; else if (!silent) showToast("Falha ao atualizar o roteiro."); }
   }
   document.addEventListener("DOMContentLoaded", () => {
     try {
@@ -88,15 +100,17 @@
       next = e.key === "Home" ? 0 : e.key === "End" ? tabs.length - 1 : (next + (e.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
       e.preventDefault(); tabs[next]?.click(); tabs[next]?.focus();
     });
-    $("#export-day-button").addEventListener("click", () => {
+    document.addEventListener("click", e => {
+      const b = e.target.closest("#export-day-button");
+      if (!b) return;
       document.body.classList.add("print-selected-day");
       window.print();
     });
     window.addEventListener("afterprint", () => document.body.classList.remove("print-selected-day"));
     $("#share-button").addEventListener("click", async () => {
       const shareData = { title: document.title, text: "Roteiro da viagem em família à Bahia.", url: location.href };
-      try { if (navigator.share) await navigator.share(shareData); else if (navigator.clipboard) { await navigator.clipboard.writeText(location.href); $("#toast").textContent = "Link copiado."; $("#toast").classList.add("show"); } }
-      catch (e) { if (e.name !== "AbortError") console.error(e); }
+      try { if (navigator.share) await navigator.share(shareData); else if (navigator.clipboard) { await navigator.clipboard.writeText(location.href); showToast("Link copiado. Roteiro compartilhado!"); } else { showToast("Compartilhamento não suportado neste navegador."); } }
+      catch (e) { if (e.name === "AbortError") return; console.error(e); try { await navigator.clipboard.writeText(location.href); showToast("Link copiado. Roteiro compartilhado!"); } catch (err) { showToast("Não foi possível copiar o link automaticamente."); } }
     });
     if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("./service-worker.js").catch(console.error);
   });

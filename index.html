@@ -8,7 +8,8 @@
     <meta name="description" content="Guia da viagem em família para a Bahia — janeiro de 2027.">
     <meta name="robots" content="noindex,nofollow">
     <meta property="og:title" content="Bahia 2027 | Viagem em Família">
-    <meta property="og:description" content="Roteiro, passeios e informações para a viagem em família à Bahia, em janeiro de 2027.">
+    <meta property="og:description"
+        content="Roteiro, passeios e informações para a viagem em família à Bahia, em janeiro de 2027.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://hedergabriel.github.io/Guarajuba/assets/bahia-hero.svg">
     <meta property="og:image:alt" content="Ilustração da viagem à Bahia">
@@ -20,7 +21,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="manifest" href="./manifest.webmanifest">\n    <link rel="stylesheet" href="./css/style.css">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="./js/data.js" defer></script>
     <script src="./js/app.js" defer></script>
 </head>
@@ -33,7 +35,9 @@
             <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links"
                 aria-label="Abrir menu">☰</button>
             <div class="nav-links" id="nav-links"><a href="#roteiro">Roteiro</a><a
-                    href="#localizacoes">Localizações</a><a href="#organizacao">Organização</a></div>
+                    href="#localizacoes">Localizações</a><a href="#organizacao">Organização</a><button
+                    class="button button-light nav-share" id="share-button" type="button">Compartilhar roteiro</button>
+            </div>
         </nav>
         <div class="hero-content container">
             <p class="eyebrow" id="hero-dates">08 A 12 DE JANEIRO</p>
@@ -43,7 +47,8 @@
             <a class="button button-light" href="#roteiro">Explorar o roteiro <span aria-hidden="true">↓</span></a>
         </div>
         <div class="hero-bottom-wave" aria-hidden="true"></div>
-        <div class="hero-stamp"><span>☀</span><small><span id="hero-travelers">—</span> viajantes<br>uma só família</small></div>
+        <div class="hero-stamp"><span>☀</span><small><span id="hero-travelers">—</span> viajantes<br>uma só
+                família</small></div>
     </header>
     <main>
         <section class="section container">
@@ -75,7 +80,8 @@
                     <p>Escolha um dia para conferir a programação completa.</p>
                 </div>
                 <div class="day-tabs" id="day-tabs" role="tablist" aria-label="Dias da viagem"></div>
-                <div class="day-panel" id="day-panel" role="tabpanel" tabindex="0" aria-labelledby="day-tab-0" aria-live="polite">
+                <div class="day-panel" id="day-panel" role="tabpanel" tabindex="0" aria-labelledby="day-tab-0"
+                    aria-live="polite">
                     <div class="loading-state">Carregando roteiro...</div>
                 </div>
             </div>
@@ -124,8 +130,7 @@
                     id="last-updated">Atualizando dados...</span></small>
         </div>
     </footer>
-    <button class="button button-primary share-button" id="share-button" type="button">Compartilhar roteiro</button>
-    <button class="button button-primary export-day-button" id="export-day-button" type="button">Exportar dia (PDF / imprimir)</button>\n    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 
 </html>
